@@ -89,11 +89,28 @@ export default function Resume() {
               </motion.div>
             </div>
 
-            {/* Download */}
+            {/* Actions */}
             <div style={{ padding: "24px 28px", display: "flex", gap: 12 }}>
               <motion.a
-                href={personalInfo.resumeUrl}
-                download
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                style={{
+                  flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  padding: "13px 20px", borderRadius: 50,
+                  background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)",
+                  color: "white", fontSize: 14, fontWeight: 700,
+                  textDecoration: "none", fontFamily: "'Space Grotesk', sans-serif",
+                }}
+              >
+                <FileText size={16} /> View
+              </motion.a>
+              
+              <motion.a
+                href="/resume.pdf"
+                download="Raja_M_Resume.pdf"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 style={{
@@ -105,7 +122,7 @@ export default function Resume() {
                   boxShadow: "0 0 30px rgba(34,197,94,0.4)",
                 }}
               >
-                <Download size={16} /> Download PDF
+                <Download size={16} /> Download
               </motion.a>
             </div>
           </motion.div>
